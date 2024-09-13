@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   title: config.SEO.title,
   description: config.SEO.description,
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,15 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground min-h-screen ${config.colors.theme} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground min-h-screen antialiased`}
       >
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="auto"
-            enableSystem
-            disableTransitionOnChange
-          >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme={config.colors.theme}
+          disableTransitionOnChange
+        >
+          {children}
         </ThemeProvider>
       </body>
     </html>
