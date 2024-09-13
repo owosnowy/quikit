@@ -8,7 +8,7 @@ const config = {
     },
     colors: {
         //light:dark
-        theme: "dark"
+        theme: "dark" //idk why but this won't work in app/layout.tsx //using next-themes because I'm too lazy to debug this
     },
     auth: {
      // The URL to redirect users to after authentication
